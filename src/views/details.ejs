@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ./partials/head.ejs %>
+</head>
+<body>
+<header>
+    <% include ./partials/header.ejs %>
+</header>
+
+<main>
+    <div class="container body-content">
+        <h2>Details</h2>
+        <div>
+            <h4><%=person.firstName%> <%=person.lastName%> </h4>
+            <hr/>
+            <dl class="dl-horizontal">
+                <!-- Birth Date -->
+                <dt>
+                    Birth Date
+                </dt>
+
+                <dd>
+                    <%=person.birthDate %>
+                </dd>
+
+                <!-- Address1 -->
+                <dt>
+                    Address1
+                </dt>
+
+                <dd>
+                    <%=person.address1 %>
+                </dd>
+
+                <!-- Address2 -->
+                <dt>
+                    Address2
+                </dt>
+
+                <dd>
+                    <%=person.address2 %>
+                </dd>
+
+                <!-- Interests -->
+                <dt>
+                    Interests
+                </dt>
+
+                <dd>
+                    <%=person.interests%>
+                </dd>
+
+                <!-- Image -->
+                <dt>
+                    Image
+                </dt>
+
+                <dd>
+                    <img class="img-rounded" height="250"
+                         src="<%=person.image%>"
+                         alt="<%=person.firstName%> <%=person.lastName%> "
+                         title="<%=person.firstName%> <%=person.lastName%> "/>
+                </dd>
+
+            </dl>
+        </div>
+
+        <p>
+            <a href="#">Edit</a> |
+            <a href="/">Back to List</a>
+        </p>
+    </div>
+</main>
+<footer>
+    <% include ./partials/footer.ejs %>
+</footer>
+</body>
+</html>
