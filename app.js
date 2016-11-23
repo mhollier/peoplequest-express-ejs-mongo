@@ -22,40 +22,21 @@ app.get("/", function(req, res) {
 // GET /people?searchTerm=stark
 app.get("/people", function(req, res) {
 	controller.getIndex(req, res);
-	// var searchTerm = req.query["searchTerm"];
-	// mongodb.connect(dbUrl, function(err, db) {
-	// 	var collection = db.collection("people");
-	// 	var mongoQuery = { $or: [
-	// 		{firstName: {$regex: searchTerm, $options: "i"}},
-	// 		{lastName: {$regex: searchTerm, $options: "i"}}
-	// 	]};
-	// 	if (req.xhr) {
-	// 		collection.find(mongoQuery).toArray(function (err, results) {
-	// 			res.render("partials/peopleList", {
-	// 				people: results
-	// 			});
-	// 		});
-	// 	}
-	// 	else {
-	// 		collection.find({}).toArray(function(err, results) {
-	// 			if (searchTerm !== undefined || searchTerm.length === 0) {
-	// 				res.render("index", {
-	// 					people: results
-	// 				});
-	// 			}
-	// 			else {
-	// 				res.render("index", {
-	// 					people: results
-	// 				});
-	// 			}
-	// 		});
-	// 	}
-	// });
 });
 
 // GET /people/58309fd12389a81864566af3
 app.get("/people/:id", function (req, res) {
 	controller.getById(req, res);
+});
+
+// GET /people/edit/58309fd12389a81864566af3
+app.get("/people/edit/:id", function (req, res) {
+	controller.getEditById(req, res);
+});
+
+// GET /people/delete/58309fd12389a81864566af3
+app.get("/people/delete/:id", function (req, res) {
+	controller.getDeleteById(req, res);
 });
 
 // GET /contact

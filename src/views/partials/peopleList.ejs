@@ -18,8 +18,8 @@
                     <!-- Get the user image -->
                     <img class="img-rounded" height="100"
                          src="<%= people[i].image %>"
-                         alt="<%= people[i].firstName %>"
-                         title="<%= people[i].firstName %>"/>
+                         alt="<%= people[i].fullName %>"
+                         title="<%= people[i].fullName %>"/>
                 </a>
             </td>
             <!-- FirstName -->
@@ -32,7 +32,7 @@
             </td>
             <!-- Age -->
             <td>
-                <%= people[i].birthDate %>
+                <%= people[i].age %>
             </td>
             <!-- Address -->
             <td>
@@ -47,13 +47,26 @@
                 Burning People at the Stake
             </td>
             <td>
-                <a class="btn btn-sm btn-default" href="#"
+                <a class="btn btn-sm btn-default" href="/people/edit/<%=people[i]._id%>"
                    style="width: 70px; margin: 2px;">Edit </a><br/>
-                <a class="btn btn-sm btn-default" href="#"
+                <a class="btn btn-sm btn-default" href="/people/delete/<%=people[i]._id%>"
                    style="width: 70px; margin: 2px;">Delete</a>
             </td>
         </tr>
         <% } %>
 
     </table>
+
+    <!-- pagination -->
+    <div>
+        <ul class="pagination">
+            <% for (var i = 1; i <= pageCount; i++) { %>
+                <%if (i == page) {%>
+                    <li class="active"><a href="/people?page=<%=i%>"><%=i%></a></li>
+                <%} else { %>
+                    <li><a href="/people?page=<%=i%>"><%=i%></a></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
 </div>
