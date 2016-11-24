@@ -1,3 +1,9 @@
+/**
+ * app.js
+ *
+ * The main web application entry point.
+ *
+ */
 var express = require("express");
 var controller = require("./src/controllers/peopleController");
 

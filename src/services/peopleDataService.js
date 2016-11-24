@@ -1,6 +1,6 @@
 /**
- * People model module.
- * @module peopleModel
+ * People data service module.
+ * @module peopleDataService
  * @author Mark Hollier <mhollier@yahoo.com>
  */
 

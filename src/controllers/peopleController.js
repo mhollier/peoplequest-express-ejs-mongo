@@ -4,7 +4,7 @@
  * @author Mark Hollier <mhollier@yahoo.com>
  */
 
-var model = require("../models/peopleModel");
+var model = require("../services/peopleDataService");
 var resultsPerPage = 5;
 
 function getIndex(req, res) {

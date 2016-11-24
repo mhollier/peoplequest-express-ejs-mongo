@@ -1,8 +1,8 @@
 # PeopleQuest
 
 ## Overview
-This is a simple [Node.js](http://nodejs.org) web application using [Express](http://expressjs.com/)
-and [MongoDB](http://www.mongodb.com).
+This is a simple [Node.js](http://nodejs.org) web application using [Express](http://expressjs.com/),
+[Embedded JavaScript (EJS)](http://www.embeddedjs.com/), and [MongoDB](http://www.mongodb.com).
 
 ## Usage
 
