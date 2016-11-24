@@ -10,68 +10,38 @@
 
 <main>
     <div class="container body-content">
-        <h2>Details</h2>
+        <hr/>
         <div>
-            <h4><%=person.firstName%> <%=person.lastName%> </h4>
-            <hr/>
+            <h4><%=person.firstName%> <%=person.lastName%></h4>
             <dl class="dl-horizontal">
                 <!-- Birth Date -->
-                <dt>
-                    Birth Date
-                </dt>
-
-                <dd>
-                    <%=person.birthDate.slice(0, 10)%>
-                </dd>
+                <dt>Birth Date</dt>
+                <dd><%=person.birthDate.slice(0, 10)%></dd>
 
                 <!-- Age -->
-                <dt>
-                    Age
-                </dt>
-
-                <dd>
-                    <%=person.age%>
+                <dt>Age</dt>
+                <dd><%=person.age%>
                 </dd>
 
                 <!-- Address1 -->
-                <dt>
-                    Address1
-                </dt>
-
+                <dt>Address</dt>
                 <dd>
-                    <%=person.address1 %>
-                </dd>
-
-                <!-- Address2 -->
-                <dt>
-                    Address2
-                </dt>
-
-                <dd>
+                    <%=person.address1 %><br/>
                     <%=person.address2 %>
                 </dd>
 
                 <!-- Interests -->
-                <dt>
-                    Interests
-                </dt>
-
-                <dd>
-                    <%=person.interests%>
-                </dd>
+                <dt>Interests</dt>
+                <dd><%=person.interests%></dd>
 
                 <!-- Image -->
-                <dt>
-                    Image
-                </dt>
-
+                <dt>Image</dt>
                 <dd>
                     <img class="img-rounded" height="250"
                          src="<%=person.image%>"
                          alt="<%=person.fullName%> "
                          title="<%=person.fullName%> "/>
                 </dd>
-
             </dl>
         </div>
 
