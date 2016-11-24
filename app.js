@@ -14,7 +14,7 @@ app.get("/", function(req, res) {
 	res.redirect("/people");
 });
 
-// GET /people?searchTerm=stark
+// GET /people?searchTerm=stark&page=2
 app.get("/people", function(req, res) {
 	controller.getIndex(req, res);
 });
@@ -22,16 +22,6 @@ app.get("/people", function(req, res) {
 // GET /people/58309fd12389a81864566af3
 app.get("/people/:id", function (req, res) {
 	controller.getById(req, res);
-});
-
-// GET /people/edit/58309fd12389a81864566af3
-app.get("/people/edit/:id", function (req, res) {
-	controller.getEditById(req, res);
-});
-
-// GET /people/delete/58309fd12389a81864566af3
-app.get("/people/delete/:id", function (req, res) {
-	controller.getDeleteById(req, res);
 });
 
 app.listen(app.get("port"), function(err) {

@@ -55,6 +55,7 @@ function getPerson(id, callback) {
 		var collection = db.collection("people");
 		collection.findOne({_id: objId}, function (err, results) {
 			callback(err, {person: createPerson(results)});
+			db.close();
 		});
 	});
 }
@@ -69,28 +70,23 @@ function getPeople(searchTerm, page, pageSize, callback) {
 		page = 1;
 	}
 
-	// Calculate the number to skip for paging
-	var skipCount = pageSize * (page - 1);
-
 	mongodb.connect(dbUrl, function (err, db) {
 		var collection = db.collection("people");
 		collection.find(query).count(function (err, count) {
-			console.log("count=" + count);
 
+			// Calculate the number to skip for paging
+			var skipCount = pageSize * (page - 1);
 			// Calculate the total number of pages (pageCount)
 			var pageCount = Math.ceil(count / pageSize);
 
-			console.log("skipCount=" + skipCount + ", page=" + page + ", pageCount=" + pageCount);
-
 			// Query database and return results via callback
 			collection.find(query).skip(skipCount).limit(pageSize).toArray(function (err, results) {
-				callback(
-					err,
-					{
-						people: createPersonArray(results),
-						page: page,
-						pageCount: pageCount
-					});
+				callback(err, {
+					people: createPersonArray(results),
+					page: page,
+					pageCount: pageCount
+				});
+				db.close();
 			});
 		});
 	});

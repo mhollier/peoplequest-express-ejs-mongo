@@ -1,3 +1,6 @@
+<!-- Partial view that is embedded in the index view. It is also returned
+    for AJAX search requests. -->
+
 <div id="peopleList">
     <table class="table">
         <tr>
@@ -7,8 +10,8 @@
             <th>Age</th>
             <th>Address</th>
             <th>Interests</th>
-            <th></th>
         </tr>
+        <!-- Begin people for loop -->
         <% for (var i = 0; i < people.length; i++) { %>
         <tr>
             <!-- Image with hyperlink to details -->
@@ -16,10 +19,10 @@
                 <!-- If the user clicks the image, navigate to person details page. -->
                 <a href="/people/<%= people[i]._id %>">
                     <!-- Get the user image -->
-                    <img class="img-rounded" height="100"
-                         src="<%= people[i].image %>"
-                         alt="<%= people[i].fullName %>"
-                         title="<%= people[i].fullName %>"/>
+                    <img class="img-rounded" height="85"
+                         src="<%=people[i].image %>"
+                         alt="<%=people[i].fullName %>"
+                         title="<%=people[i].fullName %>"/>
                 </a>
             </td>
             <!-- FirstName -->
@@ -47,18 +50,12 @@
                       <%=interests[j]%><br/>
                 <% } %>
             </td>
-            <td>
-                <a class="btn btn-sm btn-default" href="/people/edit/<%=people[i]._id%>"
-                   style="width: 70px; margin: 2px;">Edit </a><br/>
-                <a class="btn btn-sm btn-default" href="/people/delete/<%=people[i]._id%>"
-                   style="width: 70px; margin: 2px;">Delete</a>
-            </td>
         </tr>
+        <!-- End people for loop -->
         <% } %>
-
     </table>
 
-    <!-- pagination -->
+    <!-- pagination support -->
     <div>
         <ul class="pagination">
             <% for (var i = 1; i <= pageCount; i++) { %>

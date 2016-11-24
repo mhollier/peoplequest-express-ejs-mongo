@@ -12,25 +12,28 @@
     <div class="container body-content">
         <hr/>
 
-        <!-- Search form -->
-        <!-- The 'peoplequest-results-target' attribute provides the link to the div used in client
-             JavaScript during AJAX requests. -->
-        <form method="get" action="/people" class="form-horizontal" peoplequest-enable-ajax="true">
-            <div class="form-group">
-                <!-- Search by name user input control -->
-                <label class="sr-only" for="searchInput">Search by first or last name</label>
-                <input id="searchInput" type="search" name="searchTerm"
-                       class="form-control col-sm-4"
-                       placeholder="Search by first or last name" autocomplete="off"/>
+        <div class="container">
+            <!-- Search form -->
+            <!-- The 'peoplequest-results-target' attribute provides the link to the div used in client
+                 JavaScript during AJAX requests. -->
+            <form method="get" action="/people" class="form-horizontal"
+                  peoplequest-enable-ajax="true">
+                <div class="form-group">
+                    <!-- Search by name user input control -->
+                    <label class="sr-only" for="searchInput">Search by first or last name</label>
+                    <input id="searchInput" type="search" name="searchTerm"
+                           class="form-control col-sm-4"
+                           placeholder="Search by first or last name" autocomplete="off"/>
 
-                <!-- Search button to submit query -->
-                <span class="input-group-btn col-sm-1" style="padding-left: 5px">
+                    <!-- Search button to submit query -->
+                    <span class="input-group-btn col-sm-1" style="padding-left: 5px">
                     <button id="searchButton" class="btn btn-default" type="submit">
                         <span class="glyphicon glyphicon-search text-muted"></span>
                     </button>
                 </span>
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
         <% include ./partials/peopleList.ejs %>
 
     </div>
