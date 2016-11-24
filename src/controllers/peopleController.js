@@ -1,3 +1,9 @@
+/**
+ * People controller module.
+ * @module peopleController
+ * @author Mark Hollier <mhollier@yahoo.com>
+ */
+
 var model = require("../models/peopleModel");
 var resultsPerPage = 5;
 
