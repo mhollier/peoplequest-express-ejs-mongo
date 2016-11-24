@@ -68,15 +68,15 @@
                 <dd>
                     <img class="img-rounded" height="250"
                          src="<%=person.image%>"
-                         alt="<%=person.firstName%> <%=person.lastName%> "
-                         title="<%=person.firstName%> <%=person.lastName%> "/>
+                         alt="<%=person.fullName%> "
+                         title="<%=person.fullName%> "/>
                 </dd>
 
             </dl>
         </div>
 
         <p>
-            <a href="#">Edit</a> |
+            <a href="/people/edit/<%=person._id%>">Edit</a> |
             <a href="/">Back to List</a>
         </p>
     </div>

@@ -42,9 +42,10 @@
             </td>
             <!-- Interests -->
             <td>
-                Magic<br/>
-                Fire<br/>
-                Burning People at the Stake
+                <% var interests = people[i].interests.split(",");
+                   for (var j=0; j<interests.length; j++) { %>
+                      <%=interests[j]%><br/>
+                <% } %>
             </td>
             <td>
                 <a class="btn btn-sm btn-default" href="/people/edit/<%=people[i]._id%>"

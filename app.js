@@ -1,10 +1,5 @@
 var express = require("express");
-var mongodb = require("mongodb").MongoClient;
-var objectId = require("mongodb").ObjectId;
-
 var controller = require("./src/controllers/peopleController");
-
-var dbUrl = "mongodb://localhost:27017/peopleQuest";
 
 var app = express();
 
@@ -37,11 +32,6 @@ app.get("/people/edit/:id", function (req, res) {
 // GET /people/delete/58309fd12389a81864566af3
 app.get("/people/delete/:id", function (req, res) {
 	controller.getDeleteById(req, res);
-});
-
-// GET /contact
-app.get("/contact", function(req, res) {
-	res.render("contact");
 });
 
 app.listen(app.get("port"), function(err) {

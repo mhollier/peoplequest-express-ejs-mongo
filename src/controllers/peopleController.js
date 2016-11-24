@@ -1,7 +1,7 @@
 var mongodb = require("mongodb").MongoClient;
 var objectId = require("mongodb").ObjectId;
 var dbUrl = "mongodb://localhost:27017/peopleQuest";
-var resultsPerPage = 3;
+var resultsPerPage = 5;
 
 function buildQuery(searchTerm) {
 
@@ -28,6 +28,7 @@ function calculatAge(dobString) {
 
 function createPerson(dbObj) {
 	return {
+		_id: dbObj._id,
 		firstName: dbObj.firstName,
 		lastName: dbObj.lastName,
 		address1: dbObj.address1,
