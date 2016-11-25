@@ -1,10 +1,15 @@
-# PeopleQuest
+# PeopleQuest for Node.js
 
 ## Overview
 This is a simple [Node.js](http://nodejs.org) web application using [Express](http://expressjs.com/),
 [Embedded JavaScript (EJS)](http://www.embeddedjs.com/), and [MongoDB](http://www.mongodb.com).
 
 ## Usage
+Perform the following steps:
+
+    npm install
+    node dbinit.js
+    npm start
 
 ## Contributing
 **Code:** Make a fix and submit it as a pull request. 

@@ -30,6 +30,17 @@ app.get("/people/:id", function (req, res) {
 	controller.getById(req, res);
 });
 
+// Catch-all for all other routes.
+app.use(function (req, res) {
+	res.status(404).send("404 - Not found");
+});
+
+// Simple error handling middleware
+app.use(function (err, req, res, next) {
+	console.log(err);
+	res.status(500).send("500 - Error");
+});
+
 app.listen(app.get("port"), function(err) {
 	console.log("Server running on port " + app.get("port"));
 });

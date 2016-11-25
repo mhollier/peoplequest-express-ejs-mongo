@@ -1,5 +1,5 @@
 {
-	"name": "peoplequest",
+	"name": "peoplequest-express-ejs-mongo",
 	"version": "1.0.0",
 	"description": "A simple Node.js web application using Express, Embedded JavaScript (EJS), and MongoDB.",
 	"main": "app.js",
