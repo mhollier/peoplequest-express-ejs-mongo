@@ -1,14 +1,6 @@
 // Client-side logic for people search.
 
 $(function () {
-
-	// Show/hide loading indicator
-	$(document).ajaxStart(function () {
-		$("#loadingIndicator").modal("show");
-	}).ajaxStop(function () {
-		$("#loadingIndicator").modal("hide");
-	});
-
 	var ajaxFormSubmit = function () {
 		var $form = $(this);
 

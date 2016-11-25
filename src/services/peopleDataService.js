@@ -140,7 +140,8 @@ function getPeople(searchTerm, page, pageSize, callback) {
 				callback(err, {
 					people: createPersonArray(results),
 					page: page,
-					pageCount: pageCount
+					pageCount: pageCount,
+					searchTerm: searchTerm
 				});
 				db.close();
 			});
