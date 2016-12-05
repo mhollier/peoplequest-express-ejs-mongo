@@ -1,17 +1,18 @@
 {
-	"name": "peoplequest-express-ejs-mongo",
-	"version": "1.0.0",
-	"description": "A simple Node.js web application using Express, Embedded JavaScript (EJS), and MongoDB.",
-	"main": "app.js",
-	"scripts": {
-		"start": "node app.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "Mark Hollier <mhollier@yahoo.com>",
-	"license": "MIT",
-	"dependencies": {
-		"ejs": "2.5.2",
-		"express": "4.14.0",
-		"mongodb": "2.2.11"
-	}
+  "name": "peoplequest-express-ejs-mongo",
+  "version": "1.0.0",
+  "description": "A simple Node.js web application using Express, Embedded JavaScript (EJS), and MongoDB.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Hollier <mhollier@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "2.5.2",
+    "express": "4.14.0",
+    "mongodb": "2.2.11",
+    "morgan": "1.7.0"
+  }
 }
