@@ -8,7 +8,7 @@ var people = [
     address2: 'The Stormlands, Westeros',
     birthDate: '1790-01-01T00:00:00Z',
     interests: 'Magic, Fire, Burning People at the Stake',
-    image: 'images/Melisandre.jpg'
+    image: '/images/Melisandre.jpg'
   },
   {
     firstName: 'Petyr ',
@@ -17,7 +17,7 @@ var people = [
     address2: 'The Fingers, Westeros',
     birthDate: '1980-01-01T00:00:00Z',
     interests: 'Chaos, The Vale, Redheads',
-    image: 'images/Petyr_Baelish.jpg'
+    image: '/images/Petyr_Baelish.jpg'
   },
   {
     firstName: 'Sandor \'The Hound\'',
@@ -26,7 +26,7 @@ var people = [
     address2: 'Westeros',
     birthDate: '1975-01-01T00:00:00Z',
     interests: 'Fighting, Drinking, Chicken',
-    image: 'images/Sandor_Clegane.jpg'
+    image: '/images/Sandor_Clegane.jpg'
   },
   {
     firstName: 'Khal',
@@ -35,7 +35,7 @@ var people = [
     address2: 'Essos',
     birthDate: '1990-01-01T00:00:00Z',
     interests: 'Horses, War, Pillaging, Fiery Blondes',
-    image: 'images/Khal_Drogo.jpg'
+    image: '/images/Khal_Drogo.jpg'
   },
   {
     firstName: 'Cersei',
@@ -43,7 +43,7 @@ var people = [
     address1: 'King\'s Landing',
     birthDate: '1975-01-01T00:00:00Z5',
     interests: 'Treachery, Plotting, Brotherly Love',
-    image: 'images/Cersei_Lannister.jpg'
+    image: '/images/Cersei_Lannister.jpg'
   },
   {
     firstName: 'Jaime',
@@ -52,7 +52,7 @@ var people = [
     address2: 'Westeros',
     birthDate: '1975-01-01T00:00:00Z',
     interests: 'Swords, Oaths, Cersei',
-    image: 'images/Jaime_Lannister.jpg'
+    image: '/images/Jaime_Lannister.jpg'
   },
   {
     firstName: 'Tyrion',
@@ -60,7 +60,7 @@ var people = [
     address1: 'King\'s Landing',
     birthDate: '1977-01-01T00:00:00Z',
     interests: 'Drinking, Sarcasm, Companionship',
-    image: 'images/Tyrion_Lannister.jpg'
+    image: '/images/Tyrion_Lannister.jpg'
   },
   {
     firstName: 'Jorah',
@@ -69,7 +69,7 @@ var people = [
     address2: 'Bear Island, Westeros',
     birthDate: '1975-01-01T00:00:00Z',
     interests: 'Spying, Loyalty, Fiery Blondes',
-    image: 'images/Jorah_Mormont.jpg'
+    image: '/images/Jorah_Mormont.jpg'
   },
   {
     firstName: 'Jon',
@@ -77,7 +77,7 @@ var people = [
     address1: 'The Wall',
     birthDate: '1989-01-01T00:00:00Z',
     interests: 'Wildlings, Night\'s Watch, Direwolves, Redheads',
-    image: 'images/Jon_Snow.jpg'
+    image: '/images/Jon_Snow.jpg'
   },
   {
     firstName: 'Arya',
@@ -86,7 +86,7 @@ var people = [
     address2: 'Braavos',
     birthDate: '2002-01-01T00:00:00Z',
     interests: 'Swordfighting, Justice, Direwolves',
-    image: 'images/Arya_Stark.jpg'
+    image: '/images/Arya_Stark.jpg'
   },
   {
     firstName: 'Sansa',
@@ -95,7 +95,7 @@ var people = [
     address2: 'The North, Westeros',
     birthDate: '2002-01-01T00:00:00Z',
     interests: 'Family, Direwolves, Lemon Squares',
-    image: 'images/Sansa_Stark.jpg'
+    image: '/images/Sansa_Stark.jpg'
   },
   {
     firstName: 'Daenerys',
@@ -104,7 +104,7 @@ var people = [
     address2: 'Bay of Dragons, Essos',
     birthDate: '1990-01-01T00:00:00Z',
     interests: 'Dragons, Dothraki, Fire',
-    image: 'images/Daenerys_Targaryen.jpg'
+    image: '/images/Daenerys_Targaryen.jpg'
   }
 ];
 
