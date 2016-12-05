@@ -12,7 +12,7 @@ Perform the following steps:
     npm start
 
 ## Contributing
-**Code:** Make a fix and submit it as a pull request. 
+**Code:** Make a fix and submit it as a pull request.
 
 ## Author
 Mark E. Hollier
