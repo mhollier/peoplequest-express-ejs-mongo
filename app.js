@@ -17,18 +17,13 @@ app.set('views', 'src/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 5000);
 
-// GET /
+// GET /?searchTerm=stark&page=2
 app.get('/', function(req, res) {
-	res.redirect('/people');
+  controller.getIndex(req, res);
 });
 
-// GET /people?searchTerm=stark&page=2
-app.get('/people', function(req, res) {
-	controller.getIndex(req, res);
-});
-
-// GET /people/58309fd12389a81864566af3
-app.get('/people/:id', function (req, res) {
+// GET /58309fd12389a81864566af3
+app.get('/:id', function (req, res) {
 	controller.getById(req, res);
 });
 
