@@ -6,16 +6,24 @@
  */
 var express = require('express');
 var logger = require('morgan');
+var favicon = require('serve-favicon');
+var commandLineArgs = require("command-line-args");
 var controller = require('./src/controllers/peopleController');
 
-var app = express();
+// Parse the command line options
+const optionDefinitions = [
+  {name: "port", type: Number},
+];
+var options = commandLineArgs(optionDefinitions);
 
+var app = express();
+app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(logger('dev'));
 // Reference the public directory for static files (JavaScript, CSS, etc.)
 app.use(express.static('public'));
 app.set('views', 'src/views');
 app.set('view engine', 'ejs');
-app.set('port', process.env.PORT || 5000);
+app.set('port', options.port || 5000);
 
 // GET /?searchTerm=stark&page=2
 app.get('/', function(req, res) {
