@@ -4,7 +4,7 @@
   "description": "A simple Node.js web application using Express, Embedded JavaScript (EJS), and MongoDB.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node peoplequest-server.js --port 5000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mark Hollier <mhollier@yahoo.com>",
